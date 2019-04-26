@@ -32,9 +32,7 @@ namespace Assignment1SD210.Models.ActionFilter
                 .ControllerDescriptor
                 .ControllerName;
 
-            //myLog.ExecutionTime = filterContext
-            //    .ActionDescriptor
-            //    .
+            myLog.ExecutionTime = Stopwatch.ElapsedMilliseconds;
 
             DbContext.ActionFilterLogs.Add(myLog);
             DbContext.SaveChanges();
@@ -67,7 +65,7 @@ namespace Assignment1SD210.Models.ActionFilter
             var myLog = new ActionFilterLog();
             myLog.ActionName = actionName;
             myLog.ControllerName = controllerName;
-            myLog.ExecutionTime = executionTime;
+            myLog.ExecutionTime = executionTime.ElapsedMilliseconds;
             DbContext.ActionFilterLogs.Add(myLog);
             DbContext.SaveChanges();
         }
