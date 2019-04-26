@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assignment1SD210.Models;
+using Assignment1SD210.Models.ActionFilter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +9,7 @@ using System.Web.Mvc;
 namespace Assignment1SD210.Controllers
 {
     public class HomeController : Controller
-    {
+    {        
         public ActionResult Index()
         {
             return View();
@@ -25,6 +27,6 @@ namespace Assignment1SD210.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
+        }        
     }
 }
